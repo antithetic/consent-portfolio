@@ -1,10 +1,17 @@
 // @ts-check
+import presetWind4 from '@unocss/preset-wind4'
 import { defineConfig } from 'astro/config'
 import UnoCSS from 'unocss/astro'
 
 // https://astro.build/config
 export default defineConfig({
     integrations: [
-        UnoCSS(),
+        UnoCSS({
+            injectReset: true,
+            presets: [
+                presetWind4(),
+            ],
+        }
+        ),
       ],
 });
