@@ -1,11 +1,14 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightThemeFlexoki from 'starlight-theme-flexoki'
+import starlightSiteGraph from 'starlight-site-graph'
 
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
 		starlight({
+			plugins: [starlightThemeFlexoki(), starlightSiteGraph()],
 			title: 'My Docs',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
