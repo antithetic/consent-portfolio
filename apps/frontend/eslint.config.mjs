@@ -34,7 +34,7 @@ export default defineConfig([
       'simple-import-sort': simpleImportSort,
     },
     rules: {
-      // disable warnings, since prettier should format on save
+      // Prettier runs via editor/pre-commit, not through ESLint
       'prettier/prettier': 'off',
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
