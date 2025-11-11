@@ -1,0 +1,4 @@
+body {
+  @apply m-8 mx-auto bg-black text-white;
+  max-width: 60ch;
+}

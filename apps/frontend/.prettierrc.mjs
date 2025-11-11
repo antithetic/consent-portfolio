@@ -5,7 +5,9 @@ export default {
   useTabs: false,
   semi: false,
   singleQuote: true,
-  plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
+  plugins: ['prettier-plugin-astro', 
+    // 'prettier-plugin-tailwindcss'
+  ],
   overrides: [
     {
       files: ['**/*.astro'],

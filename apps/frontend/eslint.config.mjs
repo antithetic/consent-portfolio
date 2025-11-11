@@ -1,15 +1,18 @@
-import { defineConfig } from 'eslint/config'
-import globals from 'globals'
 import js from '@eslint/js'
-import tseslint from 'typescript-eslint'
+import unocss from '@unocss/eslint-config/flat'
+import { defineConfig } from 'eslint/config'
 import astro from 'eslint-plugin-astro'
 import prettier from 'eslint-plugin-prettier'
+import simpleImportSort from 'eslint-plugin-simple-import-sort'
+import globals from 'globals'
+import tseslint from 'typescript-eslint'
 
 // parsers
 const tsParser = tseslint.parser
 const astroParser = astro.parser
 
 export default defineConfig([
+  unocss,
   // Global configuration
   {
     languageOptions: {
@@ -28,10 +31,13 @@ export default defineConfig([
   {
     plugins: {
       prettier: prettier,
+      'simple-import-sort': simpleImportSort,
     },
     rules: {
       // disable warnings, since prettier should format on save
       'prettier/prettier': 'off',
+      'simple-import-sort/imports': 'error',
+      'simple-import-sort/exports': 'error',
     },
   },
 
