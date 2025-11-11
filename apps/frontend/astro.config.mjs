@@ -7,8 +7,10 @@ import markdoc from '@astrojs/markdoc';
 
 import vercel from '@astrojs/vercel';
 
+import alpinejs from '@astrojs/alpinejs';
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [mdx(), UnoCSS({}), markdoc()],
+  integrations: [mdx(), UnoCSS({}), markdoc(), alpinejs()],
   adapter: vercel(),
 })
