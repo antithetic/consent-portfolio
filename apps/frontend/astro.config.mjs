@@ -5,7 +5,10 @@ import UnoCSS from 'unocss/astro'
 
 import markdoc from '@astrojs/markdoc';
 
+import vercel from '@astrojs/vercel';
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [mdx(), UnoCSS({}), markdoc()],
+  adapter: vercel(),
 })
