@@ -11,6 +11,7 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
+    "@astrojs/markdoc": "^0.15.8",
     "@astrojs/mdx": "^4.3.10",
     "astro": "^5.15.5"
   },
