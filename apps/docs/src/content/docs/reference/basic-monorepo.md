@@ -1,6 +1,6 @@
 ---
 title: "Basic Monorepo"
-decription: "basic install for a monorepo"
+description: "basic install for a monorepo"
 ---
 
 ### Quick read on your current setup
@@ -20,11 +20,12 @@ decription: "basic install for a monorepo"
   "version": "1.0.0",
   "scripts": {
     "install": "pnpm -w install",
-    "build": "pnpm -r build",
-    "dev": "pnpm -r --parallel dev",
-    "lint": "pnpm -r lint",
-    "test": "pnpm -r test",
-    "clean": "pnpm -r clean"
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean",
+    "format": "prettier --write ."
   },
   "packageManager": "pnpm@10.15.1"
 }
@@ -76,7 +77,7 @@ Minimal `turbo.json` if you choose Turborepo:
 ```json
 {
   "$schema": "https://turbo.build/schema.json",
-  "pipeline": {
+  "tasks": {
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".astro/**", "build/**"]
