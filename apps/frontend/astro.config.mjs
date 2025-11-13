@@ -1,8 +1,8 @@
 // @ts-check
-import alpinejs from '@astrojs/alpinejs';
-import markdoc from '@astrojs/markdoc';
+import alpinejs from '@astrojs/alpinejs'
+import markdoc from '@astrojs/markdoc'
 import mdx from '@astrojs/mdx'
-import vercel from '@astrojs/vercel';
+import vercel from '@astrojs/vercel'
 import { defineConfig } from 'astro/config'
 import UnoCSS from 'unocss/astro'
 
